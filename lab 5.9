@@ -1,0 +1,32 @@
+using UnityEngine;
+//14
+public class diez : MonoBehaviour
+{
+    public bool critico;
+    public bool vulnerable;
+    public int daño;
+    double Multiplicador;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    { if (critico && vulnerable) 
+      {
+          Debug.Log(daño * 2);
+      }
+      else if (critico)
+      {
+          Debug.Log(daño * 1.5);
+      }   
+      else if (!critico)
+      {
+          Debug.Log(daño);
+      }
+
+        Multiplicador = critico && vulnerable ? daño * 2 : critico ? daño * 1.5 : daño;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
