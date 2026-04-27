@@ -1,0 +1,31 @@
+using UnityEngine;
+//11
+public class siete : MonoBehaviour
+{
+    public int vida;
+    public string VidaTotal;  
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if (vida < 20)
+        {
+            Debug.Log("Crítico");
+        }
+        else if (vida >= 20 && vida <= 50)
+        {
+            Debug.Log("Herido");
+        }
+        else if (vida > 50)
+        {
+            Debug.Log("Estable");
+        }
+
+        //VidaTotal = (vida > 20) ? (vida >= 20 && vida <= 50) ? (vida > 50) ? "Crítico" : "Herido" : "Estable" ;
+        VidaTotal = vida > 50 ? "Estable" : vida > 25 ? "herido": "critico";
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
