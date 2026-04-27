@@ -1,0 +1,24 @@
+using UnityEngine;
+//9
+public class cinco : MonoBehaviour
+{
+    public int mana;
+    public int stamina;
+    public bool EnemigoCerca;
+    string ActivarHabilidad;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (mana > 50 && stamina > 20 && EnemigoCerca)
+        {
+            Debug.Log("ActivarHabilidad");
+        }
+         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        ActivarHabilidad = (mana > 50 && stamina > 20 && EnemigoCerca) ? "Habilidad disponible" : "Habilidad no disponible";
+    }
+}
