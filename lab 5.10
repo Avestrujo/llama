@@ -1,0 +1,37 @@
+using UnityEngine;
+//15
+public class once : MonoBehaviour
+{
+    public bool JugadorVisto;
+    public bool JugadorCerca;
+    public int Energia;
+    string Atacar;
+    string Perseguir;
+    string Esperar;
+    public string EstadoDeEnemigo;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if (JugadorVisto && JugadorCerca && Energia > 30)
+        {
+            Debug.Log(Atacar);
+        }
+        else if (JugadorVisto && Energia > 50)
+        {
+            Debug.Log(Perseguir);
+        }
+        else if (JugadorVisto)
+        {
+            Debug.Log(Esperar);
+        }
+
+
+        EstadoDeEnemigo = JugadorVisto && JugadorCerca && Energia > 30 ? Atacar : JugadorVisto && Energia > 50 ? Perseguir : Esperar;
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
