@@ -1,0 +1,33 @@
+using UnityEngine;
+//13
+public class nueve : MonoBehaviour
+{
+    string accion1 = "sprint";
+    string accion2 = "run";
+    string accion3 = "walk";
+    public int stamina;
+    public string Movimiento;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {  if (stamina > 70)
+       {
+            Debug.Log(accion1);
+       }
+       else if (stamina < 70 && stamina > 30)
+       {
+            Debug.Log(accion2);
+       }
+       else if (stamina < 30)
+       {
+            Debug.Log(accion3);
+       }
+
+       Movimiento = stamina > 70 ? accion1 : stamina > 30 ? accion2 : accion3;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
