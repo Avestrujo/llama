@@ -1,0 +1,22 @@
+using UnityEngine;
+//8
+public class cuatro : MonoBehaviour
+{
+    public bool LlaveDorada;
+    public bool EnCombate;
+    public int nivel; 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if ((LlaveDorada || nivel > 15) && !EnCombate)
+        {
+            Debug.Log("Cofre abierto");
+        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
