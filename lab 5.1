@@ -1,0 +1,22 @@
+using UnityEngine;
+//6
+public class dos : MonoBehaviour
+{
+    public bool TieneArma;
+    public bool TieneMunicion;
+    public bool NoEstaAturdido;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (TieneArma && TieneMunicion && NoEstaAturdido)
+         { 
+           Debug.Log("Puede atacar"); 
+         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
