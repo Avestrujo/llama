@@ -1,0 +1,30 @@
+using UnityEngine;
+//10
+public class seis : MonoBehaviour
+{
+    public bool JugadorVisible;
+    public bool Cerca;
+    public bool Lejos;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if (JugadorVisible && Cerca)
+        {
+            Debug.Log("Atacar");
+        }
+        if (JugadorVisible && Lejos) 
+        {
+            Debug.Log("Perseguir");
+        }
+        if (!JugadorVisible) 
+        {
+            Debug.Log("Patrullar");
+        }   
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
