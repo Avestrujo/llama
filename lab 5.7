@@ -1,0 +1,26 @@
+using UnityEngine;
+//12
+public class ocho : MonoBehaviour
+{
+    public bool AccesoPermitido;
+    public bool AccesoDenegado;
+    public bool PaseVip;
+    public bool EnCombate;
+    public int nivel;
+    public string Acceso;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {  if ((nivel >= 10 || PaseVip) && !EnCombate) 
+        {
+            Debug.Log("Puedes acceder");
+        }
+
+        Acceso = ((nivel >= 10 || PaseVip) && !EnCombate) ? "Puedes acceder" : "No puedes acceder";
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
