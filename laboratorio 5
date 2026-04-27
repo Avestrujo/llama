@@ -1,0 +1,368 @@
+using Unity.VisualScripting;
+using UnityEngine;
+//ejercicios del 1 al 15
+//5
+public class uno : MonoBehaviour
+{
+    public bool nieve;
+    public bool lluvia;
+    public bool nublado;
+    public bool soleado;
+    public float temperatura;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    { 
+        if (nieve = temperatura >= -10 && temperatura <= 0)
+        { 
+          Debug.Log("Esta nevando!!");
+        }
+        if (lluvia = temperatura > 0 && temperatura < 15)
+        { 
+          Debug.Log("Esta lloviendo");
+        }
+        if (nublado = temperatura >= 15 && temperatura <= 20) 
+        { 
+          Debug.Log("Esta nublado"); 
+        }
+        if (soleado = temperatura > 20)
+        {
+          Debug.Log("Esta soleado");
+        }
+   
+    }
+      
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+
+
+-----
+using UnityEngine;
+//6
+public class dos : MonoBehaviour
+{
+    public bool TieneArma;
+    public bool TieneMunicion;
+    public bool NoEstaAturdido;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (TieneArma && TieneMunicion && NoEstaAturdido)
+         { 
+           Debug.Log("Puede atacar"); 
+         }
+
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+----
+using UnityEngine;
+//7
+public class tres : MonoBehaviour
+{
+    public bool TienePocion;
+    public bool ZonaSegura;
+    public bool EstaVivo;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {  
+        if ((TienePocion || ZonaSegura) && EstaVivo)
+        { 
+          Debug.Log("Curación disponible"); 
+        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+---
+using UnityEngine;
+//8
+public class cuatro : MonoBehaviour
+{
+    public bool LlaveDorada;
+    public bool EnCombate;
+    public int nivel; 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if ((LlaveDorada || nivel > 15) && !EnCombate)
+        {
+            Debug.Log("Cofre abierto");
+        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+---
+using UnityEngine;
+//9
+public class cinco : MonoBehaviour
+{
+    public int mana;
+    public int stamina;
+    public bool EnemigoCerca;
+    string ActivarHabilidad;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (mana > 50 && stamina > 20 && EnemigoCerca)
+        {
+            Debug.Log("ActivarHabilidad");
+        }
+         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        ActivarHabilidad = (mana > 50 && stamina > 20 && EnemigoCerca) ? "Habilidad disponible" : "Habilidad no disponible";
+    }
+}
+
+
+
+---
+using UnityEngine;
+//10
+public class seis : MonoBehaviour
+{
+    public bool JugadorVisible;
+    public bool Cerca;
+    public bool Lejos;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if (JugadorVisible && Cerca)
+        {
+            Debug.Log("Atacar");
+        }
+        if (JugadorVisible && Lejos) 
+        {
+            Debug.Log("Perseguir");
+        }
+        if (!JugadorVisible) 
+        {
+            Debug.Log("Patrullar");
+        }   
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+---
+using UnityEngine;
+//11
+public class siete : MonoBehaviour
+{
+    public int vida;
+    public string VidaTotal;  
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if (vida < 20)
+        {
+            Debug.Log("Crítico");
+        }
+        else if (vida >= 20 && vida <= 50)
+        {
+            Debug.Log("Herido");
+        }
+        else if (vida > 50)
+        {
+            Debug.Log("Estable");
+        }
+
+        //VidaTotal = (vida > 20) ? (vida >= 20 && vida <= 50) ? (vida > 50) ? "Crítico" : "Herido" : "Estable" ;
+        VidaTotal = vida > 50 ? "Estable" : vida > 25 ? "herido": "critico";
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+---
+using UnityEngine;
+//12
+public class ocho : MonoBehaviour
+{
+    public bool AccesoPermitido;
+    public bool AccesoDenegado;
+    public bool PaseVip;
+    public bool EnCombate;
+    public int nivel;
+    public string Acceso;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {  if ((nivel >= 10 || PaseVip) && !EnCombate) 
+        {
+            Debug.Log("Puedes acceder");
+        }
+
+        Acceso = ((nivel >= 10 || PaseVip) && !EnCombate) ? "Puedes acceder" : "No puedes acceder";
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+---
+using UnityEngine;
+//13
+public class nueve : MonoBehaviour
+{
+    string accion1 = "sprint";
+    string accion2 = "run";
+    string accion3 = "walk";
+    public int stamina;
+    public string Movimiento;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {  if (stamina > 70)
+       {
+            Debug.Log(accion1);
+       }
+       else if (stamina < 70 && stamina > 30)
+       {
+            Debug.Log(accion2);
+       }
+       else if (stamina < 30)
+       {
+            Debug.Log(accion3);
+       }
+
+       Movimiento = stamina > 70 ? accion1 : stamina > 30 ? accion2 : accion3;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+---
+using UnityEngine;
+//14
+public class diez : MonoBehaviour
+{
+    public bool critico;
+    public bool vulnerable;
+    public int daño;
+    double Multiplicador;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    { if (critico && vulnerable) 
+      {
+          Debug.Log(daño * 2);
+      }
+      else if (critico)
+      {
+          Debug.Log(daño * 1.5);
+      }   
+      else if (!critico)
+      {
+          Debug.Log(daño);
+      }
+
+
+        Multiplicador = critico && vulnerable ? daño * 2 : critico ? daño * 1.5 : daño;
+ 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+
+---
+using UnityEngine;
+//15
+public class once : MonoBehaviour
+{
+    public bool JugadorVisto;
+    public bool JugadorCerca;
+    public int Energia;
+    string Atacar;
+    string Perseguir;
+    string Esperar;
+    public string EstadoDeEnemigo;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {   if (JugadorVisto && JugadorCerca && Energia > 30)
+        {
+            Debug.Log(Atacar);
+        }
+        else if (JugadorVisto && Energia > 50)
+        {
+            Debug.Log(Perseguir);
+        }
+        else if (JugadorVisto)
+        {
+            Debug.Log(Esperar);
+        }
+
+
+        EstadoDeEnemigo = JugadorVisto && JugadorCerca && Energia > 30 ? Atacar : JugadorVisto && Energia > 50 ? Perseguir : Esperar;
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
